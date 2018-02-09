@@ -23,28 +23,28 @@ echo  MAIL | grep -E '^.{1,}@(hotmail|outlook|gmail)/.(com|br|com.br)'
         echo "Login Incorreto"
     fi
 read -p "RG: " RG
-echo RG | gre -E '' 
+echo RG | gre -E '^[0-9]{2}(\.[0-9]{3}){2}-[0-9]' 
    if [[$? = 0 ]]; then 
         echo "Login Correto"
         else
         echo "Login Incorreto"
     fi
     read -p "CPF: " CPF
-echo CPF | gre -E '' 
+echo CPF | gre -E '^[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}' 
    if [[$? = 0 ]]; then 
         echo "Login Correto"
         else
         echo "Login Incorreto"
     fi
     read -p "IP: " IP
-echo IP | gre -E '' 
+echo IP | gre -E '^[0-9]{2,3}\.[0-9]{2,3}\.[0-9]{2,3}\.[0-9]{2,3}' 
    if [[$? = 0 ]]; then 
         echo "Login Correto"
         else
         echo "Login Incorreto"
     fi
     read -p "Mascara:  " MASK
-echo MASK | gre -E '' 
+echo MASK | gre -E '^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\.[0-9]{3}' 
    if [[$? = 0 ]]; then 
         echo "Login Correto"
         else
