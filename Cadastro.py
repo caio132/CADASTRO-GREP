@@ -8,8 +8,26 @@ os.system("clear")
 NAME = raw_input("Nome :")
 os.system("clear")
 
+NOME = re.findall(r'([A-Z|a-z]{1,}\ [A-Z|a-z]{1,}|[A-Z|a-z]{1,})', NAME)
+
+if NOME:
+        print(NOME)
+        os.system("clear")
+
+else:
+        print("Nome invalido")
+        os.system("sleep 2")
+        exit
+
 EMAIL = raw_input("E-Mail :")
 os.system("clear")
+
+MAIL = re.findall(r'^.{1,}@(hotmail|gmail|outlook)\.(com|com.br|br)', EMAIL)
+
+if MAIL:
+        print(MAIL)
+else:
+        print("E-Mail invalido")
 
 PHONE = raw_input("Telefone :")
 os.system("clear")
@@ -26,20 +44,6 @@ os.system("clear")
 MASK = raw_input("Mascara :")
 os.system("clear")
 
-NOME = re.findall(r'([A-Z|a-z]{1,}\ [A-Z|a-z]{1,}|[A-Z|a-z]{1,})', NAME)
 
-if NOME:
-        print(NOME)
-        os.system("clear")
 
-else:
-        print("Nome invalido")
-        os.system("sleep 2")
-        exit
 
-MAIL = re.findall(r'^.{1,}@(hotmail|gmail|outlook)\.(com|com.br|br)', EMAIL)
-
-if MAIL:
-        print(MAIL)
-else:
-        print("E-Mail invalido")
