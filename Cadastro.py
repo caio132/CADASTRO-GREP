@@ -47,13 +47,13 @@ try:
         print('Cpf Incorreto, Tente Novamente!')
 
     ip  = input('IP: ')
-    if re.findall(r'^([0-9]{1,3}\.){3}[0-9]{1,3}$', ip):
+    if re.findall(r'^([0-254]{1,3}\.){3}[0-254]{1,3}$', ip):
         print('IP Correto')
     else:
         print('IP Incorreto, Tente Novamente!')
 
     mask = input('Mascara: ')
-    if re.findall(r'^([0-9]{1,3}\.){3}[0-9]{1,3}$', mask):
+    if re.findall(r'^([0-255]{1,3}\.){3}[0-255]{1,3}$', mask):
          print('Mascara Correto')
     else:
         print('Mascara Incorreta, Tente Novamente!')
