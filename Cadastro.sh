@@ -57,7 +57,7 @@ echo $PFC | grep  -E '^([0-9]{3}\.){2}[0-9]{3}-[0-9]{2}$';
     fi
     
 read -p "IP: " PI
-echo $PI | grep  -E '^([0-9]{1,3}\.){3}[0-9]{1,3}$';
+echo $PI | grep  -E '^([0-254]{1,3}\.){3}[0-254]{1,3}$';
     if [[  $? -eq 0  ]]; then
         echo "IP Correto"
         else
@@ -66,7 +66,7 @@ echo $PI | grep  -E '^([0-9]{1,3}\.){3}[0-9]{1,3}$';
     fi
     
 read -p "MASCARA: " MASC
-echo $MASC | grep  -E '^([0-9]{1,3}\.){3}[0-9]{1,3}$';
+echo $MASC | grep  -E '^([0-255]{1,3}\.){3}[0-255]{1,3}$';
     if [[  $? -eq 0  ]]; then
         echo "Mascara Correto"
         else
