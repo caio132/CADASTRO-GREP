@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-echo "Cadastro de pessoas"
+echo        "Cadastro de pessoas"
 sleep 2
 clear
 read -p "Digite seu nome: " NAME
@@ -11,23 +11,31 @@ echo $NAME | grep  -E '^([a-z|A-Z]{1,}\ [a-z|A-Z]{1,}|[a-z|A-Z]{1,}){1,}$';
         echo "Login Incorreto"
         
     fi
+
+read -p "Data de Nascimento: " DATA
+echo $DATA | grep -E '^[0-9]{2}/[0-9]{2}/[0-9]{2,4}$'
+    if [[ $? -eq 0 ]]; then
+        echo "Data de Nascimento Correto"
+        else 
+        echo "Data de Nascimento Incorreto"
+    fi
+
  read -p "Email: " MAIL
-echo $MAIL | grep  -E '^.{1,}@(hotmail|gmail|outlook)\.(com|com.br|br)';
+echo $MAIL | grep  -E '^.{1,}@([a-z|A-Z]{1,})\.(com|com.br|br)';
     if [[  $? -eq 0  ]]; then
-        clear
         echo "Email Correto"
         else
         echo "Email Incorreto"
         
     fi
  
-read -p "Telefone: " FONE 
+read -p "Celular: " FONE 
 echo $FONE | grep  -E '^\([0-9]{2}\)[0-9]{5}-[0-9]{4}$';
     if [[  $? -eq 0  ]]; then
         echo "Telefone Correto"
         else
         echo "Telefone Incorreto"
-        
+                
     fi
  
 read -p "RG: " GR
@@ -65,4 +73,7 @@ echo $MASC | grep  -E '^([0-9]{1,3}\.){3}[0-9]{1,3}$';
         echo "Mascara Incorreto"
         
     fi
-    
+
+echo    "Seus dados estão todos válidos"
+sleep 2
+clear
