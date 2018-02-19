@@ -6,9 +6,9 @@ clear
 read -p "Digite seu nome: " NAME
 echo $NAME | grep  -E '^([a-z|A-Z]{1,}\ [a-z|A-Z]{1,}|[a-z|A-Z]{1,}){1,}$';
     if [[  $? -eq 0  ]]; then
-        echo "Login Correto"
+        echo "Nome Correto"
         else
-        echo "Login Incorreto"
+        echo "Nome Incorreto"
         
     fi
 
