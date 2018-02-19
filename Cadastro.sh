@@ -39,7 +39,7 @@ echo $FONE | grep  -E '^\([0-9]{2}\)[0-9]{5}-[0-9]{4}$';
     fi
  
 read -p "RG: " GR
-echo $GR | grep  -E '^[0-9]{2}(\.[0-9]{3}){2}-[0-9]$';
+echo $GR | grep  -E '^[0-9]{2}(\.[0-9]{3}){2}-[0-9a-z]$';
     if [[  $? -eq 0  ]]; then
         echo "RG Correto"
         else
