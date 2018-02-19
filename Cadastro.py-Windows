@@ -8,7 +8,7 @@ try:
     LimpaTela()
 
     nome = input('Nome: ')
-    if re.findall(r'^[a-zA-Z ]+$', nome):
+    if re.findall('^[a-zA-Z ]+$', nome):
         print('Nome Incorreto, Tente Novamente!')
     else:
         print('Nome Correto')
