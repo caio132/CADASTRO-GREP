@@ -21,7 +21,7 @@ echo $DATA | grep -E '^[0-9]{2}/[0-9]{2}/[0-9]{2,4}$'
     fi
 
  read -p "Email: " MAIL
-echo $MAIL | grep  -E '^.{1,}@([a-z|A-Z]{1,})\.(com|com.br|br)';
+echo $MAIL | grep  -E '^.{1,}@([a-z|A-Z]{1,})\.(com|com.br|br)$';
     if [[  $? -eq 0  ]]; then
         echo "Email Correto"
         else
@@ -39,7 +39,7 @@ echo $FONE | grep  -E '^\([0-9]{2}\)[0-9]{5}-[0-9]{4}$';
     fi
  
 read -p "RG: " GR
-echo $GR | grep  -E '^[0-9]{2}(\.[0-9]{3}){2}-[0-9]';
+echo $GR | grep  -E '^[0-9]{2}(\.[0-9]{3}){2}-[0-9]$';
     if [[  $? -eq 0  ]]; then
         echo "RG Correto"
         else
@@ -74,6 +74,6 @@ echo $MASC | grep  -E '^([0-255]{1,3}\.){3}[0-255]{1,3}$';
         
     fi
 
-echo    "Seus dados estão todos válidos"
+echo    "Seus dados foram enviados, faça a correção dos erros !"
 sleep 2
 clear
