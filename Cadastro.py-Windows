@@ -1,7 +1,5 @@
-#!/usr/bin/python
-#-*- coding: utf8 -*-]
-import os, re
 
+import os, re
 
 def LimpaTela():
     os.system('cls||clear')
@@ -10,7 +8,6 @@ try:
     LimpaTela()
 
     nome = input('Nome: ')
-    
     if re.findall(r'^[a-zA-Z ]+$', nome):
         print('Nome Incorreto, Tente Novamente!')
     else:
