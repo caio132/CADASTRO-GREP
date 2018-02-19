@@ -1,5 +1,7 @@
-
+#!/usr/bin/python
+#-*- coding: utf8 -*-]
 import os, re
+
 
 def LimpaTela():
     os.system('cls||clear')
@@ -8,7 +10,8 @@ try:
     LimpaTela()
 
     nome = input('Nome: ')
-    if re.findall('^[a-zA-Z ]+$', nome):
+    
+    if re.findall('[!@#$%&*1234567890()]$', nome):
         print('Nome Incorreto, Tente Novamente!')
     else:
         print('Nome Correto')
