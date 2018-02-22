@@ -12,9 +12,9 @@ try:
     nome = raw_input('Nome: ')
     
     if re.findall(r'^[a-zA-Z ]+$', nome):
-        print('Nome Incorreto, Tente Novamente!')
-    else:
         print('Nome Correto')
+    else:
+        print('Nome Incorreto, Tente Novamente!')
 
     mail = raw_input('Email: ')
     if re.findall(r'^.{1,}@([A-Z|a-z]{1,})\.(com|com.br|br)$', mail):
